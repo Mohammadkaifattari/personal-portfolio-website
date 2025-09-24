@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -235,6 +236,196 @@
   });
 </script>
 
+
+
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed('#element', {
+        strings: [
+          'Full-Stack Web Developer ”',
+          'Building modern web apps ”',
+          'Creating responsive websites ”',
+          'Turning ideas into clean code ”'
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        loop: true
+      });
+    </script>
+</body>
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Muhammad Kaif | Web Developer Portfolio</title>
+ <meta name="description" content="Portfolio of Muhammad Kaif Attari — aspiring full-stack web developer building interactive, responsive, and modern web applications.">
+<link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="left">Muhammad Kaif's Portfolio</div>
+      <div class="right">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="firstSec">
+      <div class="leftSec" class="leftSec reveal-left">
+        <div>“ Hi, I’m <span style="color: #63ceff;">Muhammad Kaif Attari</span></div>
+        <span id="element" style="color: #fb8500;"></span>
+
+
+      </div>
+      <div class="rightSec" class="rightSec reveal-right">
+        <img src="img.jpg" width="90%" alt="" class="rightSec reveal-right">
+      </div>
+    </section>
+    <hr>
+
+    <section id="about"  class="about-section" class="about-text reveal-left">
+      <span class="light">Who I Am</span>
+      <h1>About Me</h1>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I’m Muhammad Kaif, a student of <strong>Jamia Tul Madina</strong> and a passionate
+            full-stack web developer in the making. My goal is to achieve
+            <em> self-reliance</em> by solving real-world problems through technology.
+          </p>
+          <p>
+            Alongside my studies, I aim to use my skills to support others and help
+            <strong>Deen</strong> in meaningful ways through digital solutions.
+            I believe technology, when used right, can be a powerful tool for service and positive change.
+          </p>
+         <a href="resume.pdf" download class="resume-btn"> Download Resume</a>
+        </div>
+        <div class="about-photo">
+          <img src="profile1.jpg" alt="Muhammad Kaif" class="about-photo reveal-right">
+        </div>
+      </div>
+    </section>
+    <hr>
+<section id="services" class="services-section" class="service-card reveal">
+  <h3 class="section-label">What I Do</h3>
+  <h2 class="services-title">Services</h2>
+
+  <div class="services-grid">
+    <article class="service-card" style="--delay: .1s;">
+      <img src="web-dev.jpg" class="service-icon" alt="">
+      <h3>Web Development</h3>
+      <p>Responsive, accessible websites using HTML, CSS, JavaScript, and React — optimized for performance and mobile.</p>
+    </article>
+
+    <article class="service-card" style="--delay: .25s;">
+     <img src="backend.jpg" class="service-icon" alt="">
+      <h3>Backend & APIs</h3>
+      <p>RESTful APIs, server-side logic and database integration using Node.js, Express, and MongoDB/SQL for scalable apps.</p>
+    </article>
+
+    <article class="service-card" style="--delay: .40s;">
+      <img src="anim.webp" class="service-icon" alt="">
+      <h3>UI / UX & Animations</h3>
+      <p>Clean interfaces, micro-interactions, and motion design that make apps feel polished and delightful to use.</p>
+    </article>
+
+    <article class="service-card" style="--delay: .55s;">
+      <img src="dev.webp" class="service-icon" alt="">
+      <h3>Deployment & Maintenance</h3>
+      <p>Deploy to Netlify/Vercel/GitHub Pages and keep projects updated with best practices for security and performance.</p>
+    </article>
+  </div>
+</section>
+<hr>
+
+    <section id="projects" class="projects" class="project reveal">
+      <h3 class="section-label">My Work</h3>
+      <h2>Projects</h2>
+
+      <div class="project-list">
+
+        <div class="project">
+          <img src="periodic table.png" autoplay alt="Periodic Table Project Preview">
+          <h3>Interactive Periodic Table</h3>
+          <p>
+            An interactive periodic table built with HTML, CSS, and JavaScript.
+            Users can explore element properties and quickly search by name or symbol.
+          </p>
+          <a href=" https://mohammadkaifattari.github.io/Periodic-Table-/" target="_blank">🔗 Live Demo</a>
+          <a href="https://github.com/Mohammadkaifattari/Periodic-Table-.git" target="_blank">💻 Code </a>
+          <a href="https://youtu.be/mAhLH6VBgC0?si=neblh9Bl1oJ2_DIQ" target="_blank"> ▶ Watch Demo</a>
+
+        </div>
+
+
+        <div class="project">
+          <img src="airbnb clone.PNG" alt="Airbnb Clone Preview">
+          <h3>Airbnb Clone</h3>
+          <p>
+            A simplified Airbnb clone where users can browse property listings and
+            make bookings. Built with React and Node.js to demonstrate full-stack skills.
+          </p>
+          <a href=" https://mohammadkaifattari.github.io/airbnb-clone/" target="_blank">🔗 Live Demo</a>
+          <a href="https://github.com/Mohammadkaifattari/airbnb-clone.git" target="_blank">💻 Code</a>
+
+        </div>
+
+
+        <div class="project">
+          <img src="todo.png" alt="To-Do List App Preview">
+          <h3>To-Do List App</h3>
+          <p>
+            A responsive to-do app with task filtering and local storage. Designed
+            to help users manage daily tasks efficiently.
+          </p>
+          <a href="https://sage-squirrel-3727e6.netlify.app/" target="_blank">🔗 Live Demo</a>
+          <a href="https://github.com/yourgithub/project-repo" target="_blank">💻 Code</a>
+
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+
+    <section id="contact" class="contact" class="contact reveal">
+      <span class="light">Get In Touch</span>
+      <h1>Contact Me</h1>
+      <p>If you’d like to work together, discuss ideas, or just say Salam 👋, reach out anytime.</p>
+      <ul>
+        <li>Email: <a href="mailto:kaifattari0123@gmail.com">kaifattari0123@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/Mohammadkaifattari" target="_blank">github.com/Mohammadkaifattari</a>
+        </li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/mohammad-kaif-attari-60282a363/"
+            target="_blank">linkedin.com/in/mohammad-kaif-attari-60282a363</a></li>
+      </ul>
+    </section>
+
+    <hr>
+
+
+    <footer>
+      <p>© 2025 Muhammad Kaif. All rights reserved.</p>
+    </footer>
 <script>
   // reveal sections on scroll
   const reveals = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
@@ -274,4 +465,5 @@
     </script>
 </body>
 
+>>>>>>> 8af759639d0023d6b0b8d92bcd220643c1235eef
 </html>
