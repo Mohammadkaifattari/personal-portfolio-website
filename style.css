@@ -470,3 +470,145 @@ html, body {
         font-size: 0.9rem;
       }
     }
+    @media (max-width: 768px) {
+  .menu-toggle { 
+    display: block; 
+    z-index: 1002;
+    position: relative;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  
+  .nav-links {
+    position: fixed; 
+    top: 0; 
+    right: -100%; 
+    width: 280px;
+    height: 100vh;
+    background: var(--background-primary);
+    flex-direction: column; 
+    padding: 80px 20px 40px; 
+    transition: 0.3s ease-in-out; 
+    backdrop-filter: blur(20px);
+    z-index: 1001;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    overflow-y: auto;
+  }
+  
+  .nav-links.open { 
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .nav-links li {
+    margin: 15px 0;
+    width: 100%;
+    list-style: none;
+  }
+  
+  .nav-links a {
+    font-size: 1.2rem;
+    display: block;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border);
+    width: 100%;
+    transition: 0.3s;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .nav-links a:hover {
+    background: var(--surface);
+    border-radius: 8px;
+    color: var(--accent);
+  }
+
+  /* Overlay background - behind menu */
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+  
+  .nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Prevent body scroll when menu is open */
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+/* For larger screens */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    background: transparent !important;
+    padding: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    box-shadow: none !important;
+    flex-direction: row !important;
+  }
+  
+  .nav-links li {
+    margin: 0 !important;
+    width: auto !important;
+  }
+  
+  .nav-links a {
+    padding: 0 !important;
+    border-bottom: none !important;
+    font-size: 1rem !important;
+  }
+  
+  .nav-links a:hover {
+    background: transparent !important;
+    color: var(--accent) !important;
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  .nav-overlay {
+    display: none !important;
+  }
+}
+
+/* Reset body margins and padding */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Ensure no horizontal overflow */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
