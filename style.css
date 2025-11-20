@@ -299,28 +299,33 @@ html, body {
    /* Mobile Menu Styles */
 /* Mobile Menu Styles */
 /* Mobile Menu Styles */
+/* Mobile Menu Styles */
 @media (max-width: 768px) {
   .menu-toggle { 
     display: block; 
-    z-index: 1001;
+    z-index: 1002; /* Increased z-index */
     position: relative;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    cursor: pointer;
   }
   
   .nav-links {
     position: fixed; 
     top: 0; 
     right: -100%; 
-    width: 280px; /* Fixed width instead of percentage */
+    width: 280px;
     height: 100vh;
     background: var(--background-primary);
     flex-direction: column; 
     padding: 80px 20px 40px; 
     transition: 0.3s ease-in-out; 
     backdrop-filter: blur(20px);
-    z-index: 1000;
+    z-index: 1001; /* Higher than overlay */
     box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
     display: flex;
-    /* Ensure it's completely hidden */
     visibility: hidden;
     opacity: 0;
     transform: translateX(100%);
@@ -335,25 +340,30 @@ html, body {
   }
   
   .nav-links li {
-    margin: 12px 0;
+    margin: 15px 0;
     width: 100%;
+    list-style: none;
   }
   
   .nav-links a {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     display: block;
-    padding: 12px 15px;
+    padding: 15px 20px;
     border-bottom: 1px solid var(--border);
     width: 100%;
     transition: 0.3s;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
   }
 
   .nav-links a:hover {
     background: var(--surface);
     border-radius: 8px;
+    color: var(--accent);
   }
 
-  /* Overlay background */
+  /* Overlay background - behind menu */
   .nav-overlay {
     position: fixed;
     top: 0;
@@ -361,7 +371,7 @@ html, body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
-    z-index: 999;
+    z-index: 1000; /* Lower than menu */
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
@@ -375,9 +385,6 @@ html, body {
   /* Prevent body scroll when menu is open */
   body.menu-open {
     overflow: hidden;
-    position: fixed;
-    width: 100%;
-    height: 100%;
   }
 }
 
@@ -394,6 +401,23 @@ html, body {
     opacity: 1 !important;
     transform: none !important;
     box-shadow: none !important;
+    flex-direction: row !important;
+  }
+  
+  .nav-links li {
+    margin: 0 !important;
+    width: auto !important;
+  }
+  
+  .nav-links a {
+    padding: 0 !important;
+    border-bottom: none !important;
+    font-size: 1rem !important;
+  }
+  
+  .nav-links a:hover {
+    background: transparent !important;
+    color: var(--accent) !important;
   }
   
   .menu-toggle {
